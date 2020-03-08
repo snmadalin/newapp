@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Predict diabetes with the help of ML</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+  <div class="log">
+      <h1>Predict Diabetes with the help of Machine Learning </h1>
+      <h2>Important Notice: This project is only for Educational purpose.</h2>
+    <h4> Student: Nicu Madalin Smaranda</h4>
+
+  </div>
+
+ <div class="login">
+
+
+
+     
+  <form action="{{ url_for('predict')}}"method="post">
+    <input type="text" name="Pregnancies" placeholder="Number of Pregnancies" required="required" />
+    <input type="text" name="Glucose" placeholder="Glucose" required="required" />
+    <input type="text" name="BloodPressure" placeholder="Blood Pressure" required="required" />
+    <input type="text" name="SkinThickness" placeholder="Skin Thickness" required="required" />
+    <input type="text" name="Insulin" placeholder="Insulin level" required="required" />
+    <input type="text" name="BMI" placeholder="BMI" required="required" />
+    <input type="text" name="DiabetesPedigreeFunction" placeholder="Diabetes Pedigree Function" required="required" />
+    <input type="text" name="Age" placeholder="Age" required="required" />
+  
+  
+    <button type="submit" class="btn btn-primary  btn-lg">Predict</button>
+  </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+   
+   <hr/>
+   <center><h2>Your Result:</h2><strong><i>Negative!! You do not have diabetes<br>Probability that you will have diabetes in future:{{ prob }}&percnt;</i></strong></center><br>
+
+ </div>
+ 
+</body>
+
+</html>
+
+
