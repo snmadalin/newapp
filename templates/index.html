@@ -71,14 +71,14 @@
 
   <!-- About Section -->
   <section class="page-section bg-primary" id="predict">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="text-white mt-0">We need few more information about you!</h2>
-          <hr class="divider light my-4">
-          <p class="text-white-50 mb-4">This is a web application which aims to predict whether a women has diabetes or not based on various features such as Glucose Level, Insulin,Age, Pregancies and so on.In order to make a prediction, a machine learning model has been created using diabetes dataset from Pima Indians.</p>
-          <a class="btn btn-down btn-light btn-xl js-scroll-trigger" href="#getstarted">Get Started!</a>
-        </div>
+    <div class="jumbotron">
+      <h2 class="display-5">We need few more information about you!</h2>
+      <br>
+      <p class="lead">This is a web application which aims to predict whether a women has diabetes or not based on various features such as Glucose Level, Insulin,Age, Pregancies and so on.In order to make a prediction, a machine learning model has been created using diabetes dataset from Pima Indians.</p>
+      <hr class="my-4">
+      <div class="text-center">
+        <p class="fill">Please fill out the following fields.</p>
+        <a class="btn btn-down btn-light btn-xl js-scroll-trigger align-middle" href="#getstarted">Get Started!</a>
       </div>
     </div>
  <!--Contact section-->
@@ -171,7 +171,7 @@
                </div>
 
               <div class="col-6 btn-form">
-                <input type="submit" class="btn btn-down btn-light btn-xl" value="Predict">
+                <input type="submit" class="btn btn-down btn-light btn-xl" value="Predict" href="#predict">
             </div>
           
                    </div>
@@ -179,7 +179,15 @@
                 
                 <br>
                 <br>
-                {{ prediction_text }}
+                <br>
+                <div class="card" id="predict">
+                  <h5 class="card-header text-center">Featured</h5>
+                  <div class="card-body">
+                    <h5 class="card-title text-center">Your result:</h5>
+                    <p class="card-text text-center">{{ prediction_text }}</p>
+                  </div>
+                </div>
+                
 
       </div>
       <div class="col-md-3">
@@ -192,6 +200,13 @@
 
 </section>
 
+<div class="card">
+  <h5 class="card-header text-center">Featured</h5>
+  <div class="card-body">
+    <h5 class="card-title text-center">Your result:</h5>
+    <p class="card-text text-center">{{ prediction_text }}</p>
+  </div>
+</div>
 <!--End contact section-->
 
 
@@ -228,7 +243,7 @@
       <div class="small text-center text-muted">
         <div>
           Copyright &copy;<span id="copyright"> </span>
-          - <a href="www.dotlab.tech" target= "_blank">dotlab.tech</a>
+          - <a href="https://www.dotlab.tech" target="_blank">dotlab.tech</a>
         </div>
     </div>
     </div>
