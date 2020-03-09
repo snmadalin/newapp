@@ -9585,9 +9585,11 @@ hr.light {
   border: none;
   border-radius: 10rem;
 }
-
+.fill {
+  padding-bottom: 2rem;
+}
 .page-section {
-  padding: 8rem 0;
+  padding: 0;
   height-max: 100%;
 }
 
