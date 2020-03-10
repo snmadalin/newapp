@@ -170,8 +170,8 @@
                    </div>
                </div>
 
-              <div class="col-6 btn-form">
-                <input type="submit" class="btn btn-down btn-light btn-xl" value="Predict" href="#makeprediction">
+              <div class="col-6 btn-form" id="myHeader">
+                <input type="submit" class="btn btn-down btn-light btn-xl" value="Predict" href="#makeprediction" onclick="displayResult()">
             </div>
           
                    </div>
@@ -263,6 +263,11 @@
   <script src="static/js/creative.min.js"></script>
   <script src="{{ url_for('static', filename='js/creative.js') }}"></script>
   <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+  <script>
+    function displayResult() {
+      document.getElementById("myHeader").innerHTML = {{ prediction_text }};
+    }
+    </script>
 
 
 </body>
